@@ -18,6 +18,8 @@ vim.opt.termguicolors = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+vim.opt.signcolumn = 'yes'
+
 vim.opt.clipboard:append('unnamedplus')
 
 vim.opt.swapfile = false

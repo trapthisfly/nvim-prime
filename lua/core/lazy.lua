@@ -18,42 +18,45 @@ require("lazy").setup({
   'nvim-lua/plenary.nvim',
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
-    dependencies = { 
-      'nvim-lua/plenary.nvim' 
+    dependencies = {
+      'nvim-lua/plenary.nvim'
     },
     {
-      "nvim-telescope/telescope-fzf-native.nvim", 
-      build = "make" 
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make"
     },
     "nvim-tree/nvim-web-devicons",
   },
-  { 
-    'nvim-treesitter/nvim-treesitter', 
-    build = ':TSUpdate' 
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate'
   },
-  { 
-    "ellisonleao/gruvbox.nvim", 
-    priority = 1000 , 
-    config = true, 
+  {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    config = true,
     opts = ...
   },
   "mbbill/undotree",
   "tpope/vim-fugitive" ,
   {
-    "stevearc/dressing.nvim", 
+    "stevearc/dressing.nvim",
     event = "VeryLazy",
   },
 
   -- depedencies for cmp
+  'rafamadriz/friendly-snippets',
   {
     "L3MON4D3/LuaSnip",
     version = "v2.1",
-    build = "make install_jsregexp"
+    build = "make install_jsregexp",
+    depedencies = {
+      'rafamadriz/friendly-snippets',
+    },
   },
   'saadparwaiz1/cmp_luasnip',
-  'rafamadriz/friendly-snippets',
-  { 
-    "hrsh7th/nvim-cmp", 
+  {
+    "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     depedencies = {
       'hrsh7th/cmp-buffer',
